@@ -1,0 +1,82 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	background-color: black;
+}
+
+body {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+div {
+	flex-basis: 15%;
+	flex-grow: 1;
+	height: 33.33vh;
+	border: .5px solid grey;
+}
+
+@media(orientation: portrait) {
+	div {
+		flex-basis: 30%;
+		flex-grow: 1;
+		height: 16.66vh;
+	}
+}
+
+.red {
+	background-color: red;
+	border: .5px solid red;
+}
+
+.green {
+	background-color: green;
+	border: .5px solid green;
+}
+
+.blue {
+	background-color: blue;
+	border: .5px solid blue;
+}
+
+.yellow {
+	background-color: yellow;
+	border: .5px solid yellow;
+}
+
+.gray {
+	background-color: gray;
+	border: .5px solid gray;
+}
+
+.brown {
+	background-color: brown;
+	border: .5px solid brown;
+}
+
+.violet {
+	background-color: violet;
+	border: .5px solid violet;
+}
+
+.lightgreen {
+	background-color: lightgreen;
+	border: .5px solid lightgreen;
+}
+
+.cadetblue {
+	background-color: cadetblue;
+	border: .5px solid cadetblue;
+}
+
+.off {
+	background-color: grey;
+	border: .5px solid grey;
+}
+
+.hidden {
+	background-color: black;
+	border: .5px solid grey;
+}
+
