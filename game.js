@@ -53,6 +53,7 @@ const clickCard = function() {
 	}
 }
 
+// start game
 const init = function() {
 	cards.forEach(function(card) {
 		const position = Math.floor(Math.random() * cardsColor.length);
@@ -66,6 +67,8 @@ const init = function() {
 			})
 		}, 100)
 	});
+	
+	alert(`Are You ready ? xD`);
 }
 
 init()
