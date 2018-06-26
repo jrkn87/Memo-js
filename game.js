@@ -19,6 +19,7 @@ const activeCards = [];
 
 const gamePairs = cards.length / 2;
 let gameResult = 0;
+let accurary = 0;
 
 const clickCard = function() {
 	activeCard = this;
@@ -27,10 +28,12 @@ const clickCard = function() {
 	
 	if (activeCards.length === 0) {
 		activeCards[0] = activeCard;
+        accurary++;
 	} 
 	else {
 		cards.forEach(card => card.removeEventListener("click", clickCard));
 		activeCards[1] = activeCard;
+        accurary++;
 		setTimeout(function() {
 			if (activeCards[0].className === activeCards[1].className) {
 				activeCards.forEach(card => card.classList.add("off"));
@@ -39,7 +42,8 @@ const clickCard = function() {
 				if (gameResult === gamePairs) {
 					const endTime = new Date().getTime();
 					const gameTime = (endTime - startTime)/1000;
-					alert(`Udało się! Twój wynik to: ${gameTime} secund`);
+                    const accuraryResult = 1800/accurary;
+					alert(`\nUdało się! Twój wynik to: ${gameTime.toFixed(1)} secund\nSkuteczność: ${accuraryResult.toFixed(1)} %`);
 					location.reload();
 				}
 			}
